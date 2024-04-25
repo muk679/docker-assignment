@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: image-deployment
+  labels:
+    app: image-project
+spec:
+  selector:
+    matchLabels:
+      app: image-project
+  template:
+    metadata:
+      labels:
+        app: image-project
+    spec:
+      containers:
+      - name: form
+        image: muk679/form
+        ports:  
+          - containerPort: 80

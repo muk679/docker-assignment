@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+  labels:
+    owner: Vaibhav
+spec:
+  containers:
+  - name: form
+    image: muk679/form
+    ports:
+    - containerPort: 80
